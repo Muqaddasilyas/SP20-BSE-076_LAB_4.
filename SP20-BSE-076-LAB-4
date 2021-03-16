@@ -1,0 +1,35 @@
+public class HotDogStand {
+    private int id_number;
+    private int no_of_hot_dogs;
+    public HotDogStand(int x, int y){
+        id_number = x;
+        no_of_hot_dogs = y;
+    }
+    public int getidnum(){
+        return id_number;
+    }
+    public void justsold(int z){
+        no_of_hot_dogs = no_of_hot_dogs + z;   
+    }
+    public int gethotdogs(){
+      return no_of_hot_dogs;
+    }
+    public void display(){
+        System.out.println(" id number : "+getidnum()+" hot dogs sold : "+gethotdogs());
+    }  
+}
+
+package hotdogstand;
+public class hotdogstand_runner {
+    public static void main(String[]args){
+        HotDogStand h1 = new HotDogStand(8956, 5);
+        h1.justsold(1);
+        h1.display();
+        HotDogStand h2 = new HotDogStand(8967, 2);
+        h2.justsold(2);
+        h2.display();
+        HotDogStand h3 = new HotDogStand(3241, 8);
+        h3.justsold(3);
+        h3.display();   
+    }
+}
